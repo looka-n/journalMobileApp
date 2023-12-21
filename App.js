@@ -1,8 +1,22 @@
+// App.js
+
 import React from 'react';
-import MultipleCards from './MultipleCards'; // Import the MultipleCards component
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import MultipleCards from './MultipleCards';
+import ExpandedCard from './ExpandedCard'; // Create an ExpandedCard component for the expanded view
+
+const Stack = createStackNavigator();
 
 const App = () => {
-  return <MultipleCards />;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Cards" component={MultipleCards} />
+        <Stack.Screen name="ExpandedCard" component={ExpandedCard} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 };
 
 export default App;
