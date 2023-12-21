@@ -3,8 +3,8 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import MultipleCards from './MultipleCards';
-import ExpandedCard from './ExpandedCard'; // Create an ExpandedCard component for the expanded view
+import MultipleCards from './src/MultipleCards';
+import ExpandedCard from './src/ExpandedCard'; // Create an ExpandedCard component for the expanded view
 
 const Stack = createStackNavigator();
 
